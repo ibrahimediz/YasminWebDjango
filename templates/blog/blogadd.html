@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    {% comment %} {{form.as_table}} {% endcomment %}
+    {% comment %} {{form.as_ul}} {% endcomment %}
+    <input type="submit" value="Gönder">
+</form>
+
+
+
+<br>
+<p><a href={% url 'index' %}>Anasayfa</a></p>
+<p><a href={% url 'bloglist' %}>Gönderilerin Listesi</a></p>
+</body>
+
+</html>
